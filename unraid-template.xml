@@ -3,14 +3,16 @@
   <Repository>logllm/logllm:latest</Repository>
   <Network>bridge</Network>
   <ManagementURL>:8080</ManagementURL>
-  <Description>Log monitoring application with LLM-powered error analysis. Monitors log files in real-time and sends notifications for critical errors.</Description>
+  <Description>Log monitoring application with LLM-powered error analysis. Monitors log files in real-time and sends notifications for critical errors. Features: Real-time monitoring, LLM analysis (Ollama/LocalAI), Notifications (Discord/Telegram/Email), Web GUI, SQLite storage.</Description>
   <Category>Development:Other Network:Other</Category>
   <WebUI>:8080/</WebUI>
-  <TemplateURL></TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/logllm/logllm/master/unraid-template.xml</TemplateURL>
   <Config Name="Port" Target="8080" Default="8080" Mode="" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
-  <Config Name="App Data" Target="/app/appdata" Default="" Mode="rw" Description="Configuration and database storage" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="App Data" Target="/app/appdata" Default="" Mode="rw" Description="Configuration and database storage (SQLite)" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Logs Directory" Target="/logs" Default="" Mode="ro" Description="Directory containing log files to monitor" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="LLM Endpoint" Target="LLM_ENDPOINT" Default="http://host.docker.internal:11434" Mode="" Description="LLM API endpoint (Ollama/LocalAI)" Type="Var" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Enable CPU" Target="" Default="" Mode="" Description="" Type="Device" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="CPUset" Target="" Default="" Mode="" Description="CPU Cores to run container on" Type="Var" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="GPU Support" Target="" Default="" Mode="" Description="Enable GPU acceleration for LLM" Type="Device" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Restart Policy" Target="" Default="unless-stopped" Mode="" Description="Container restart policy" Type="Var" Display="advanced" Required="false" Mask="false">unless-stopped</Config>
 </Container>
