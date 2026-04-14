@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all application files
 COPY *.py .
-COPY index.html .
-COPY app.js .
+COPY templates/ ./templates/
+COPY static/ ./static/
 
 # Create directories
 RUN mkdir -p /app/appdata /logs

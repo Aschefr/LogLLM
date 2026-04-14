@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogLLM - AI-Powered Log Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 LogLLM</h1>
+            <p class="subtitle">AI-Powered Log Analysis & Monitoring</p>
+        </header>
+
+        <main>
+            <section class="dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Active Logs</h3>
+                        <p id="active-logs">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Analyses Today</h3>
+                        <p id="analyses-today">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>LLM Requests</h3>
+                        <p id="llm-requests">0</p>
+                    </div>
+                </div>
+
+                <div class="logs-section">
+                    <h2>Monitored Logs</h2>
+                    <div id="logs-list"></div>
+                </div>
+
+                <div class="analyses-section">
+                    <h2>Recent Analyses</h2>
+                    <div id="analyses-list"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>LogLLM v1.0 - Powered by Flask & Ollama</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

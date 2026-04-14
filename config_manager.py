@@ -186,6 +186,17 @@ class ConfigManager:
         
         return [dict(row) for row in results]
     
+    def get_active_logs(self):
+        """Get all active logs"""
+        conn = sqlite3.connect(self.db_path)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM logs WHERE is_active = 1 ORDER BY created_at DESC')
+        results = cursor.fetchall()
+        conn.close()
+        
+        return [dict(row) for row in results]
+    
     def get_log(self, log_id):
         """Get a single log by ID"""
         conn = sqlite3.connect(self.db_path)
