@@ -15,7 +15,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY *.py .
 COPY index.html .
 COPY app.js .
-COPY tests/ ./tests/
 
 # Create directories
 RUN mkdir -p /app/appdata /logs
