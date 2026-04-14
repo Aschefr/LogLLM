@@ -21,7 +21,7 @@ LogLLM is a self-contained Docker application that monitors log files in real-ti
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Aschefr/logllm
+git clone https://github.com/yourusername/logllm.git
 cd logllm
 ```
 
